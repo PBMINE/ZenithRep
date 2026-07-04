@@ -22,9 +22,6 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          ({ ... }: {
-            nixpkgs.overlays = [ inputs.waybar.overlays.default ];
-          })
           ./configuration.nix
         ];
       };

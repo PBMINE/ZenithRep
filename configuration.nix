@@ -106,11 +106,6 @@
       portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     };
 
-    waybar = {
-      enable = true;
-      package = pkgs.waybar;
-    };
-
     xwayland = {
       enable = true;
     };
@@ -189,6 +184,7 @@
       cmatrix
       steam
       swayosd
+      inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar
       swaynotificationcenter
       gnome-themes-extra
       krita
