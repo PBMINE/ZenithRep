@@ -6,7 +6,10 @@
       url = "nixpkgs/nixos-unstable";
     };
     hyprland = {
-      url = "github:hyprwm/Hyprland/v0.55.4-b";
+      url = "github:hyprwm/Hyprland/main";
+    };
+    waybar = {
+      url = "github:alexays/waybar/master";
     };
   };
 

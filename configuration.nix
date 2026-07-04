@@ -106,6 +106,11 @@
       portalPackage = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     };
 
+    waybar = with inputs; {
+      enable = true;
+      package = waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar;
+    };
+
     xwayland = {
       enable = true;
     };
@@ -178,7 +183,6 @@
       networkmanager_dmenu
       dmenu-bluetooth
       komikku
-      waybar
       bluetui
       awww
       vscode
