@@ -98,17 +98,17 @@
 
   programs = {
 
-    hyprland = with inputs; {
+    hyprland = {
       enable = true;
       # set the flake package
-      package = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
       # make sure to also set the portal package, so that they are in sync
-      portalPackage = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+      portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     };
 
-    waybar = with inputs; {
+    waybar = {
       enable = true;
-      package = inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar;
+      package = pkgs.waybar;
     };
 
     xwayland = {
