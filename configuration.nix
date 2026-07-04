@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, inputs, pkgs, ... }:
+{ config, lib, inputs, pkgs, qtEnv, ... }:
 
 {
   imports =
@@ -188,7 +188,6 @@
       swaynotificationcenter
       gnome-themes-extra
       krita
-      qt6
       modrinth-app
       pavucontrol
       qtcreator
@@ -212,6 +211,10 @@
     git
     libnotify
     efibootmgr
+    qtEnv
+    cmake
+    gnumake
+    gcc
     unzip
   ];
 
