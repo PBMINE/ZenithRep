@@ -190,6 +190,9 @@
       krita
       modrinth-app
       pavucontrol
+      matugen
+      flameshot
+      grim
     ];
   };	  
 
