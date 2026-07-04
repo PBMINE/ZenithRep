@@ -188,6 +188,7 @@
       swaynotificationcenter
       gnome-themes-extra
       krita
+      qt6
       modrinth-app
       pavucontrol
       qtcreator
