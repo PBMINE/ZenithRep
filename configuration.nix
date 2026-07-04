@@ -206,6 +206,7 @@
     wget
     git
     libnotify
+    efibootmgr
     unzip
   ];
 
