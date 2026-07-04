@@ -109,6 +109,7 @@
     waybar = with inputs; {
       enable = true;
       package = waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar;
+      override = { ... }: inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar;
     };
 
     xwayland = {
