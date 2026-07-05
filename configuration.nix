@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, inputs, pkgs, qtEnv, ... }:
+{ config, lib, inputs, pkgs, ... }:
 
 {
   imports =
@@ -211,10 +211,22 @@
     git
     libnotify
     efibootmgr
-    qtEnv
+
+
+    gdb
     cmake
     gnumake
     gcc
+    pkg-config
+
+    qt6.qtbase
+    qt6.qtdeclarative
+    qt6.qtwebengine
+    qt6.qttools
+    qt6.qt5compat
+    qt6.qtwebchannel
+    qt6.qtpositioning
+
     unzip
   ];
 
