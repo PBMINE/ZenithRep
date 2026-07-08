@@ -14,6 +14,9 @@
     graphics = {
       enable = true;
       enable32Bit = true;
+      extraPackages = with pkgs; [
+        vulkan-loader
+      ];
     };
   };
 
@@ -190,7 +193,6 @@
       krita
       modrinth-app
       pavucontrol
-      qtcreator
       matugen
       flameshot
       grim
@@ -211,29 +213,16 @@
     git
     libnotify
     efibootmgr
-
-
-    gdb
-    cmake
-    gnumake
-    gcc
-    pkg-config
-
-    qt6.qtbase
-    qt6.qtdeclarative
-    qt6.qtwebengine
-    qt6.qttools
-    qt6.qt5compat
-    qt6.qtwebchannel
-    qt6.qtpositioning
-
+    vulkan-tools
     unzip
   ];
 
   programs.nix-ld.enable = true;
   /*programs.nix-ld.libraries = with pkgs; [
-    # Add any missing dynamic libraries for unpackaged programs
-    # here, NOT in environment.systemPackages
+    vulkan-loader
+    wayland
+    libGL
+    libxkbcommon
   ];*/
 
   # Some programs need SUID wrappers, can be configured further or are
