@@ -504,11 +504,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1783296486,
-        "narHash": "sha256-urC1njV+FyrskLdTw0G8/MKPgEM7UjLx0M1BVfeI2rE=",
+        "lastModified": 1783351322,
+        "narHash": "sha256-gVYj72W4L5FJwtfkT/m8PxgDKBT/3HIq1BdnxhFtlPQ=",
         "owner": "alexays",
         "repo": "waybar",
-        "rev": "624623215d11f017cc948502eec54dcec7ddec56",
+        "rev": "98b2a563f398f63f99ec8a6f7fb2b19a172abd5d",
         "type": "github"
       },
       "original": {
