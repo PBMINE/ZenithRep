@@ -171,6 +171,7 @@
     extraGroups = [ "wheel" "networkmanager" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
+      element-desktop
       fastfetch
       kitty
       kdePackages.dolphin
