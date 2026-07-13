@@ -187,18 +187,39 @@
       vscode
       cmatrix
       steam
+      wineWow64Packages.waylandFull
+      winetricks
       swayosd
       inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar
       swaynotificationcenter
       gnome-themes-extra
       krita
-      modrinth-app
+      # modrinth-app
       pavucontrol
       matugen
       flameshot
       grim
     ];
-  };	  
+  };
+
+  services.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = true;
+
+  users.users.nullnormal = {
+    isNormalUser = true;
+    home = "/home/nullnormal";
+    description = "GNOME Desktop User";
+    extraGroups = [ "wheel" "networkmanager" ];
+    shell = pkgs.zsh;
+    packages = with pkgs; [
+      firefox
+      aria2
+      wineWow64Packages.waylandFull
+      winetricks
+      gnome-tweaks
+      gnome-extension-manager
+    ];
+  };
 
   environment.variables = {
     XCURSOR_THEME = "Adwaita";
