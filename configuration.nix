@@ -137,6 +137,8 @@
 
   # Enable sound.
 
+  services.udisks2.enable = true;
+
   services = {
 
     flatpak = {
