@@ -195,6 +195,7 @@
       inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar
       swaynotificationcenter
       gnome-themes-extra
+      aseprite
       krita
       # modrinth-app
       pavucontrol
