@@ -217,6 +217,7 @@
     packages = with pkgs; [
       firefox
       aria2
+      protonplus
       wineWow64Packages.waylandFull
       winetricks
       gnome-tweaks
