@@ -252,6 +252,12 @@ in
     RUSTICL_ENABLE = "radeonsi";
   };
 
+
+  environment.sessionVariables = {
+    EDITOR = "nano";
+    NIXOS_OZONE_WL = "1"; # Example: enables wayland support for electron apps
+    RUSTICL_ENABLE = "radeonsi";
+  };
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
