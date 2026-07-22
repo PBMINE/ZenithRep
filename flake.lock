@@ -140,11 +140,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1784493300,
-        "narHash": "sha256-fSBTAgqZavyhV6eHzTjxVGL4FWUl9Qk+zaa+2CWUuYU=",
+        "lastModified": 1784641930,
+        "narHash": "sha256-j1c/65skFvp1WPbHBlAfVWaeCz0Bgwr/WPwIg0H+Ncg=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "42b15274bcde7d9add76dfc70b0bb70c7a870305",
+        "rev": "1a3606234c59842340ad9a42baeeffe44a9d6cda",
         "type": "github"
       },
       "original": {
@@ -402,11 +402,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1784356753,
-        "narHash": "sha256-zupdTm41be2fY8cexroEOGjopl3F2Gqs3gk7ieqaM3s=",
-        "rev": "61b7c44c4073f0b827768aff0049561b5110ea5a",
+        "lastModified": 1784497964,
+        "narHash": "sha256-WhdsTtaih3DgTPP/PX023b36UNQyMzEoi6GkPyGx0y4=",
+        "rev": "241313f4e8e508cb9b13278c2b0fa25b9ca27163",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1036777.61b7c44c4073/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1037713.241313f4e8e5/nixexprs.tar.xz"
       },
       "original": {
         "id": "nixpkgs",
@@ -480,11 +480,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1784481351,
-        "narHash": "sha256-YbohiACWamqR/9JjTWNzv/jCUkzl1l/Gey3KzTts63w=",
+        "lastModified": 1784661194,
+        "narHash": "sha256-pSbVf9mMWazkaTgNM0X4pfkIS/6AzoAfs7YTS27udOE=",
         "owner": "alexays",
         "repo": "waybar",
-        "rev": "456f78ecb1cf16e5397a29691e69fc2906843387",
+        "rev": "30610d3b68f109e950d924bc7d9c42b8cbbc5df8",
         "type": "github"
       },
       "original": {

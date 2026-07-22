@@ -4,6 +4,9 @@
 
 { config, lib, inputs, pkgs, ... }:
 
+let
+  davinci-actual = (import (pkgs.writeText "davinci-actual-resolve.nix" (builtins.readFile "/home/pbmine/.config/davinci-actual-resolve.nix")) { inherit pkgs lib; }).davinci-actual;
+in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -16,6 +19,7 @@
       enable32Bit = true;
       extraPackages = with pkgs; [
         vulkan-loader
+        mesa.opencl
       ];
     };
   };
@@ -197,10 +201,21 @@
       winetricks
       swayosd
       inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar
+      (pkgs.wrapOBS {
+        plugins = with pkgs.obs-studio-plugins; [
+          wlrobs
+          obs-backgroundremoval
+          obs-pipewire-audio-capture
+          obs-vaapi #optional AMD hardware acceleration
+          obs-gstreamer
+          obs-vkcapture
+        ];
+      })
       swaynotificationcenter
       gnome-themes-extra
       aseprite
       krita
+      davinci-actual
       # modrinth-app
       pavucontrol
       matugen
@@ -234,6 +249,7 @@
     XCURSOR_SIZE = "24";
     HYPRCURSOR_THEME = "Adwaita";
     HYPRCURSOR_SIZE = "24";
+    RUSTICL_ENABLE = "radeonsi";
   };
 
   # List packages installed in system profile.
