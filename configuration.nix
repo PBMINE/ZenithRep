@@ -167,7 +167,6 @@ in
 
   environment.systemPackages = with pkgs; [
     wget
-    git
     libnotify
     efibootmgr
     glib
