@@ -1,0 +1,165 @@
+// -*- mode: jsonc -*-
+{
+    "height": 45,
+    "margin": "7 0 0 0",
+    "spacing": 15,
+    "reload_style_on_change": true,
+    "modules-left": ["group/ws", "group/hardware"],
+
+    "group/ws": {
+        "orientation": "horizontal",
+        "modules": ["hyprland/workspaces"]
+    },
+
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": ["hyprland/submap", "cpu", "memory", "temperature", "hyprland/window"]
+    },
+
+    "modules-center": [],
+
+    "group/centerclock": {
+        "orientation": "horizontal",
+        "modules": ["tray", "battery", "clock"]
+    },
+
+    "modules-right": ["group/barnetwork", "group/hyprlang", "group/powerstuff", "group/centerclock", "group/wlongout"],
+
+    "group/wlongout": {
+        "orientation": "horizontal",
+        "modules": ["custom/wlogout"]
+    },
+
+    "group/powerstuff": {
+        "orientation": "horizontal",
+        "modules": ["pulseaudio"]
+    },
+
+    "group/barnetwork": {
+        "orientation": "horizontal",
+        "modules": ["network", "bluetooth"]
+    },
+
+    "group/hyprlang": {
+        "orientation": "horizontal",
+        "modules": ["hyprland/language", "power-profiles-daemon"]
+    },
+
+    "tray": {
+        "spacing": 10
+    },
+
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+
+    "cpu": {
+        "format": "{usage}%  󰍛",
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": "{}%  󰍜"
+    },
+
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": [" 󱃃"]
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}%  {icon}",
+        "format-full": "{capacity}%  {icon}",
+        "format-charging": "{capacity}%  󰂄",
+        "format-plugged": "{capacity}%  󰚥",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["󰂎", "󰁻", "󰁽", "󰁿", "󰁹"]
+    },
+
+    "power-profiles-daemon": {
+        "format": "{icon}  ",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "󰗑",
+            "power-saver": "󰌪"
+        }
+    },
+
+    "network": {
+        "rfkill": true,
+        "format-wifi": "{icon}",
+        "format-disabled": "󰤮",
+        "tooltip-format-disabled": "No network connection existed yet :(",
+        "format-icons": ["󰤮", "󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+        "format-ethernet": "",
+        "tooltip-format": "{essid}",
+        "tooltip-format-ethernet": "{gwaddr} ",
+        "format-linked": "",
+        "format-disconnected": "󰤮",
+        "interval": 5,
+        "on-click": "networkmanager_dmenu"
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "  {icon} {format_source}",
+        "format-muted": "  {format_source}",
+        "format-source": "   {volume}% 󰍬",
+        "format-source-muted": " 󰍭",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "bluetooth": {
+        "format": "    ",
+        "format-disabled": " 󰂲   ",
+        "format-connected": "    ",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "rofi-bluetooth"
+    },
+
+    "custom/wlogout": {
+        "format": "  󰣇  ",
+        "on-click": "swaync-client -t"
+    },
+
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "US",
+        "format-th": "TH",
+        "on-click": "hyprctl switchxkblayout all next"
+    },
+
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "format": " {name} ",
+        "active-only": false,
+        "on-click": "hyprctl dispatch workspace {name}"
+    },
+
+    "hyprland/window": {
+        "max-length": 40,
+        "max-chars": 40,
+        "separate-outputs": true
+    }
+}

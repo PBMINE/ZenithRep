@@ -1,0 +1,1 @@
+/nix/store/32cyjd0mgpac0n5fzcgdzzkvn2p3bdr1-home-manager-files/.zenithrep/configs/zsh/.zshenv

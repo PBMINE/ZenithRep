@@ -1,0 +1,33 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "type": "kitty",
+    "source": "/home/pbmine/.config/fastfetch/logo.png",
+    "padding": {
+      "top": 3,
+      "left": 5,
+      "right": 7
+    }
+  },
+  "modules": [
+    "break",
+    "title",
+    "separator",
+    "os",
+    "host",
+    "kernel",
+    "uptime",
+    "wm",
+    "terminal",
+    "cpu",
+    "gpu",
+    "memory",
+    "disk",
+    "battery",
+    "break",
+    {
+      "type": "colors",
+      "symbol": "block"
+    }
+  ]
+}

@@ -1,13 +1,22 @@
-{ config, lib, inputs, pkgs, ... }:
+{
+  lib,
+  inputs,
+  pkgs,
+  ...
+}:
 
 let
-  davinci-actual = (import (pkgs.writeText "davinci-actual-resolve.nix" (builtins.readFile "/home/pbmine/.config/davinci-actual-resolve.nix")) { inherit pkgs lib; }).davinci-actual;
+  davinci-actual =
+    (import (pkgs.writeText "davinci-actual-resolve.nix" (
+      builtins.readFile "/home/pbmine/.config/davinci-actual-resolve.nix"
+    )) { inherit pkgs lib; }).davinci-actual;
 in
 {
   imports = [
-      ./hardware-configuration.nix
+    ./hardware-configuration.nix
+    inputs.hyprland.nixosModules.default
   ];
-  
+
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -35,7 +44,6 @@ in
     wifi.backend = "iwd";
   };
 
-
   security.polkit.enable = true;
   security.rtkit.enable = true;
 
@@ -56,12 +64,16 @@ in
   services.desktopManager.gnome.enable = true;
   services.displayManager.gdm.enable = true;
 
+  services.getty.autologinUser = "pbmine";
+
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
-     /*config.common = {
-      default = [ "*" ];
-    };*/
+    /*
+      config.common = {
+        default = [ "*" ];
+      };
+    */
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -69,12 +81,13 @@ in
     isNormalUser = true;
     home = "/home/pbmine";
     description = "Probably know me anyway!";
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+    ];
     shell = pkgs.zsh;
     packages = with pkgs; [
       element-desktop
-      fastfetch
-      kitty
       kdePackages.dolphin
       kdePackages.ark
       kdePackages.kate
@@ -83,6 +96,7 @@ in
       btop
       vesktop
       rofi
+      kitty
       networkmanager_dmenu
       rofi-bluetooth
       komikku
@@ -110,7 +124,7 @@ in
       aseprite
       krita
       davinci-actual
-      # modrinth-app
+      modrinth-app
       pavucontrol
       opencode
       matugen
@@ -124,7 +138,10 @@ in
     isNormalUser = true;
     home = "/home/nullnormal";
     description = "GNOME Desktop User";
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+    ];
     shell = pkgs.zsh;
     packages = with pkgs; [
       firefox
@@ -138,18 +155,23 @@ in
     ];
   };
 
-
-  programs.hyprland = {
-    enable = true;
-    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-  };
-
   programs.xwayland.enable = true;
   programs.dconf.enable = true;
   programs.firefox.enable = true;
   programs.zsh.enable = true;
   programs.nix-ld.enable = true;
+
+  programs.hyprland = {
+    enable = true;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    portalPackage =
+      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    xwayland.enable = true;
+    withUWSM = true;
+    plugins = [
+      pkgs.hyprlandPlugins.borders-plus-plus
+    ];
+  };
 
   environment.variables = {
     XCURSOR_THEME = "Adwaita";
@@ -164,7 +186,6 @@ in
     RUSTICL_ENABLE = "radeonsi";
   };
 
-
   environment.systemPackages = with pkgs; [
     wget
     libnotify
@@ -175,23 +196,39 @@ in
     (python3.withPackages (python-pkgs: with python-pkgs; [ pygame ]))
     rustc
     cargo
+    nil
+    nixpkgs-fmt
+    lua-language-server
     gcc
   ];
 
-  environment.etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
+  environment.etc."xdg/menus/applications.menu".source =
+    "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-  ];
+  /*
+    fonts.packages = with pkgs; [
+      nerd-fonts.jetbrains-mono
+    ];
+  */
 
   nix.settings = {
-    experimental-features = [ "nix-command" "flakes" ];
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
 
-    substituters = [ "https://hyprland.cachix.org" "https://mirrors.ustc.edu.cn/nix-channels/store" "https://cache.nixos.org/" ];
+    substituters = [
+      "https://hyprland.cachix.org"
+      "https://mirrors.ustc.edu.cn/nix-channels/store"
+      "https://cache.nixos.org/"
+    ];
 
-    trusted-substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
-    trusted-users = ["root" "pbmine"];
+    trusted-substituters = [ "https://hyprland.cachix.org" ];
+    trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
+    trusted-users = [
+      "root"
+      "pbmine"
+    ];
   };
 
   nixpkgs.config = {
@@ -203,4 +240,3 @@ in
   system.stateVersion = "26.11";
 
 }
-

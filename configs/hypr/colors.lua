@@ -1,0 +1,113 @@
+return {
+    image = "/home/pbmine/Pictures/wallpaper/Img0_(Windows_8_build_7762).jpg",
+    
+    background = "rgba(121318ff)",
+    
+    error = "rgba(ffb4abff)",
+    
+    error_container = "rgba(93000aff)",
+    
+    inverse_on_surface = "rgba(2f3036ff)",
+    
+    inverse_primary = "rgba(465d91ff)",
+    
+    inverse_surface = "rgba(e2e2e9ff)",
+    
+    on_background = "rgba(e2e2e9ff)",
+    
+    on_error = "rgba(690005ff)",
+    
+    on_error_container = "rgba(ffdad6ff)",
+    
+    on_primary = "rgba(142e60ff)",
+    
+    on_primary_container = "rgba(d9e2ffff)",
+    
+    on_primary_fixed = "rgba(001944ff)",
+    
+    on_primary_fixed_variant = "rgba(2e4578ff)",
+    
+    on_secondary = "rgba(293042ff)",
+    
+    on_secondary_container = "rgba(dce2f9ff)",
+    
+    on_secondary_fixed = "rgba(141b2cff)",
+    
+    on_secondary_fixed_variant = "rgba(404659ff)",
+    
+    on_surface = "rgba(e2e2e9ff)",
+    
+    on_surface_variant = "rgba(c5c6d0ff)",
+    
+    on_tertiary = "rgba(412742ff)",
+    
+    on_tertiary_container = "rgba(fdd7faff)",
+    
+    on_tertiary_fixed = "rgba(2a132cff)",
+    
+    on_tertiary_fixed_variant = "rgba(593d5aff)",
+    
+    outline = "rgba(8f9099ff)",
+    
+    outline_variant = "rgba(44464fff)",
+    
+    primary = "rgba(b0c6ffff)",
+    
+    primary_container = "rgba(2e4578ff)",
+    
+    primary_fixed = "rgba(d9e2ffff)",
+    
+    primary_fixed_dim = "rgba(b0c6ffff)",
+    
+    scrim = "rgba(000000ff)",
+    
+    secondary = "rgba(bfc6dcff)",
+    
+    secondary_container = "rgba(404659ff)",
+    
+    secondary_fixed = "rgba(dce2f9ff)",
+    
+    secondary_fixed_dim = "rgba(bfc6dcff)",
+    
+    shadow = "rgba(000000ff)",
+    
+    source_color = "rgba(022964ff)",
+    
+    surface = "rgba(121318ff)",
+    
+    surface_bright = "rgba(38393fff)",
+    
+    surface_container = "rgba(1e1f25ff)",
+    
+    surface_container_high = "rgba(282a2fff)",
+    
+    surface_container_highest = "rgba(33353aff)",
+    
+    surface_container_low = "rgba(1a1b20ff)",
+    
+    surface_container_lowest = "rgba(0c0e13ff)",
+    
+    surface_dim = "rgba(121318ff)",
+    
+    surface_tint = "rgba(b0c6ffff)",
+    
+    surface_variant = "rgba(44464fff)",
+    
+    tertiary = "rgba(e0bbdeff)",
+    
+    tertiary_container = "rgba(593d5aff)",
+    
+    tertiary_fixed = "rgba(fdd7faff)",
+    
+    tertiary_fixed_dim = "rgba(e0bbdeff)",
+    
+
+    matchsurface = "rgba(12131899)",
+    matchsurfacelow = "rgba(1a1b2099)",
+    matchsurfacehigh = "rgba(282a2f99)",
+    matchsurfacehighest = "rgba(33353a99)",
+    matchprimary = "rgba(b0c6ff99)",
+    matchprimarycontainer = "rgba(2e457899)",
+    matchoutline = "rgba(44464f99)",
+}
+
