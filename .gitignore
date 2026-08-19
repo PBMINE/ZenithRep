@@ -1,4 +1,10 @@
 result
 rokit
 configs/zsh/.zsh_history
+configs/zsh/.zprofile
+configs/zsh/.zshenv
+configs/zsh/.zshrc
+configs/zsh/plugins/powerlevel10k
+configs/zsh/plugins/powerlevel10k-config
+configs/zsh/plugins/zsh-syntax-highlighting
 davinci/current.json
