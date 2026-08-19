@@ -1,1 +1,1 @@
-/nix/store/fhwczsgb535cniajrms4bjm80cylpah7-home-manager-files/.zenithrep/configs/zsh/.zprofile
+/nix/store/1aqhv7azvkny52398ibmqvxxlkvdwhv3-home-manager-files/.zenithrep/configs/zsh/.zprofile

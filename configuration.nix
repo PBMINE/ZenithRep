@@ -195,6 +195,8 @@ in
     HYPRCURSOR_THEME = "Adwaita";
     NIXOS_OZONE_WL = "1"; # Example: enables wayland support for electron apps
     RUSTICL_ENABLE = "radeonsi";
+    RUSTICL_FEATURES = "fp64";
+    QT_QPA_PLATFORM= "wayland;xcb";
   };
 
   environment.systemPackages = with pkgs; [
