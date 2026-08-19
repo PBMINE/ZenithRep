@@ -61,11 +61,15 @@ in
   services.pipewire.wireplumber.enable = true;
 
   services.flatpak.enable = true;
-  services.desktopManager.gnome.enable = true;
-  services.displayManager.ly.enable = true;
-#   services.displayManager.gdm.enable = true;
 
-  services.getty.autologinUser = "pbmine";
+  services.desktopManager.gnome.enable = true;
+  services.gnome.core-developer-tools.enable = false;
+  services.gnome.games.enable = false;
+
+  services.displayManager.ly.enable = true;
+  #   services.displayManager.gdm.enable = true;
+
+#   services.getty.autologinUser = "pbmine";
 
   xdg.portal = {
     enable = true;
@@ -124,7 +128,7 @@ in
       gnome-themes-extra
       # aseprite
       krita
-      davinci-actual
+#       davinci-actual
       modrinth-app
       pavucontrol
       opencode
@@ -133,7 +137,6 @@ in
       grim
     ];
   };
-
 
   users.users.nullnormal = {
     isNormalUser = true;
