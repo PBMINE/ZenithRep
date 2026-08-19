@@ -10,7 +10,7 @@
 window#waybar {
     background-color: transparent;
     color: @on_surface_variant;
-    border-radius: 8px;
+    border-radius: 0px;
     transition-property: background-color, opacity;
     transition-duration: 0.25s;
     transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -19,7 +19,7 @@ window#waybar {
 #hardware, #ws, #wlongout, #barnetwork, #hyprlang, #powerstuff, #centerclock {
     background-color: @matchsurface;
     border: 2px solid @matchonsurfacelow;
-    border-radius: 8px;
+    border-radius: 0px;
     background-clip: padding-box;
 }
 
@@ -36,7 +36,7 @@ window#waybar.hidden {
 button {
     box-shadow: inset 0 -3px transparent;
     border: none;
-    border-radius: 8px;
+    border-radius: 0px;
 }
 
 button:hover {
@@ -45,18 +45,18 @@ button:hover {
 }
 
 #pulseaudio:hover {
-    border-radius: 8px;
+    border-radius: 0px;
     background-color: rgba(0, 0, 0, 0.2);
 }
 
 #workspaces button {
     padding: 0 6px;
-    min-width: 28px;
+    min-width: 20px;
     min-height: 24px;
     background-color: transparent;
     color: @on_surface_variant;
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: 0px;
     transition: all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -82,8 +82,8 @@ button:hover {
 #mode {
     background-color: @secondary_container;
     color: @on_secondary_container;
-    border-radius: 8px;
-    padding: 0 8px;
+    border-radius: 0px;
+    padding: 0 0px;
     font-weight: 500;
     margin: 0 2px;
     transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);

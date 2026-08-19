@@ -62,7 +62,8 @@ in
 
   services.flatpak.enable = true;
   services.desktopManager.gnome.enable = true;
-  services.displayManager.gdm.enable = true;
+  services.displayManager.ly.enable = true;
+#   services.displayManager.gdm.enable = true;
 
   services.getty.autologinUser = "pbmine";
 
@@ -121,7 +122,7 @@ in
       })
       swaynotificationcenter
       gnome-themes-extra
-      aseprite
+      # aseprite
       krita
       davinci-actual
       modrinth-app
@@ -199,6 +200,7 @@ in
     nil
     nixpkgs-fmt
     lua-language-server
+    libXi
     gcc
   ];
 
