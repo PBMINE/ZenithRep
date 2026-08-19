@@ -196,7 +196,7 @@ in
     NIXOS_OZONE_WL = "1"; # Example: enables wayland support for electron apps
     RUSTICL_ENABLE = "radeonsi";
     RUSTICL_FEATURES = "fp64";
-    QT_QPA_PLATFORM= "wayland;xcb";
+    QT_QPA_PLATFORM = "wayland;xcb";
   };
 
   environment.systemPackages = with pkgs; [
@@ -212,12 +212,24 @@ in
     nil
     nixpkgs-fmt
     lua-language-server
-    libXi
+    fortune
+    figlet
     gcc
   ];
 
   environment.etc."xdg/menus/applications.menu".source =
     "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
+
+  fonts.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-color-emoji
+    liberation_ttf
+    fira-code
+    fira-code-symbols
+    nerd-fonts.iosevka
+    nerd-fonts.iosevka-term
+  ];
 
   /*
     fonts.packages = with pkgs; [

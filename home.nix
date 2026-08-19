@@ -1,4 +1,5 @@
 {
+  lib,
   config,
   pkgs,
   ...
@@ -51,6 +52,16 @@ in
     shellAliases = {
       jigsaw = "echo I have engineer, btw";
     };
+
+    initContent = lib.mkOrder 1000 ''
+      figlet ZenithOS
+      echo "Today it's $(date)"
+      echo "You're running $(source $(ls /etc/os-release) && echo $PRETTY_NAME)"
+      echo ""
+      fortune -s
+      echo ""
+      echo ""
+    '';
 
     profileExtra = ''
       if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
