@@ -15,7 +15,14 @@ in
   imports = [
     ./hardware-configuration.nix
     inputs.hyprland.nixosModules.default
+    inputs.mesa-git-nix.nixosModules.default
   ];
+
+  nixpkgs.overlays = [ inputs.mesa-git-nix.overlays.default ];
+
+  mesa-git = {
+    enable = true;
+  };
 
   hardware.graphics = {
     enable = true;
@@ -69,7 +76,7 @@ in
   services.displayManager.ly.enable = true;
   #   services.displayManager.gdm.enable = true;
 
-#   services.getty.autologinUser = "pbmine";
+  #   services.getty.autologinUser = "pbmine";
 
   xdg.portal = {
     enable = true;
@@ -128,7 +135,7 @@ in
       gnome-themes-extra
       # aseprite
       krita
-#       davinci-actual
+      davinci-actual
       modrinth-app
       pavucontrol
       opencode

@@ -2,9 +2,9 @@
 
 * {
     font-family: "Inter Nerd Font Propo", "SF Pro Display", "SF Pro Text", sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
-    padding: 2px;
+    padding: 1px;
 }
 
 window#waybar {
