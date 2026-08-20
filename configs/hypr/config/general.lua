@@ -10,16 +10,16 @@
     https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/
     https://wiki.hypr.land/Configuring/Layouts/Master-Layout/
 ]]
-local _colors = require("colors")
+local colors = require("colors")
 
 hl.config({
     general = {
         gaps_in = 4,
-        gaps_out = { top = 10, right = 20, bottom = 20, left = 20 },
-        border_size = 2,
+        gaps_out = { top = 20, right = 20, bottom = 10, left = 20 },
+        border_size = 4,
         col = {
-            active_border = _colors.matchsurfacelow,
-            inactive_border = _colors.matchsurfacelow,
+            active_border = colors.matchsurfacelow,
+            inactive_border = colors.matchsurfacelow,
         },
         resize_on_border = true,
         allow_tearing = false,
@@ -81,4 +81,6 @@ hl.config({
             natural_scroll = true,
         },
     },
+
+
 })

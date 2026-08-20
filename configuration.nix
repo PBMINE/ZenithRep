@@ -1,5 +1,6 @@
 {
   lib,
+  config,
   inputs,
   pkgs,
   ...
@@ -14,7 +15,6 @@ in
 {
   imports = [
     ./hardware-configuration.nix
-    inputs.hyprland.nixosModules.default
     inputs.mesa-git-nix.nixosModules.default
   ];
 
@@ -133,7 +133,6 @@ in
       })
       swaynotificationcenter
       gnome-themes-extra
-      # aseprite
       krita
       davinci-actual
       modrinth-app
@@ -175,14 +174,14 @@ in
   programs.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    portalPackage =
-      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     xwayland.enable = true;
     withUWSM = true;
-    plugins = [
-      pkgs.hyprlandPlugins.borders-plus-plus
-    ];
   };
+
+  programs.hyprlock.enable = true;
+
+  services.hypridle.enable = true;
 
   environment.variables = {
     XCURSOR_THEME = "Adwaita";
@@ -193,7 +192,7 @@ in
   environment.sessionVariables = {
     EDITOR = "nano";
     HYPRCURSOR_THEME = "Adwaita";
-    NIXOS_OZONE_WL = "1"; # Example: enables wayland support for electron apps
+    NIXOS_OZONE_WL = "1";
     RUSTICL_ENABLE = "radeonsi";
     RUSTICL_FEATURES = "fp64";
     QT_QPA_PLATFORM = "wayland;xcb";
@@ -230,12 +229,6 @@ in
     nerd-fonts.iosevka
     nerd-fonts.iosevka-term
   ];
-
-  /*
-    fonts.packages = with pkgs; [
-      nerd-fonts.jetbrains-mono
-    ];
-  */
 
   nix.settings = {
     experimental-features = [

@@ -1,8 +1,9 @@
 // -*- mode: jsonc -*-
 {
     "height": 25,
-    "margin": "7 0 0 0",
+    "margin": "0 0 7 0",
     "spacing": 15,
+    "position": "bottom",
     "reload_style_on_change": true,
     "modules-left": ["group/ws", "group/hardware"],
 
@@ -20,15 +21,10 @@
 
     "group/centerclock": {
         "orientation": "horizontal",
-        "modules": ["tray", "battery", "clock"]
+        "modules": ["tray", "battery", "clock", "custom/wlogout"]
     },
 
-    "modules-right": ["group/barnetwork", "group/hyprlang", "group/powerstuff", "group/centerclock", "group/wlongout"],
-
-    "group/wlongout": {
-        "orientation": "horizontal",
-        "modules": ["custom/wlogout"]
-    },
+    "modules-right": ["group/barnetwork", "group/hyprlang", "group/powerstuff", "group/centerclock"],
 
     "group/powerstuff": {
         "orientation": "horizontal",

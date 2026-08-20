@@ -3,7 +3,10 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+    };
+
     waybar.url = "github:alexays/waybar/master";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -13,6 +16,11 @@
     mesa-git-nix = {
       url = "github:Daaboulex/mesa-git-nix";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
     };
   };
 
@@ -29,7 +37,6 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
-
           home-manager.nixosModules.home-manager
           {
             home-manager = {

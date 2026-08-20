@@ -78,6 +78,8 @@ in
     fetch
   ];
 
+  services.hyprpolkitagent.enable = true;
+
   xdg.enable = true;
 
   xdg.configFile = builtins.mapAttrs (name: subpath: {
