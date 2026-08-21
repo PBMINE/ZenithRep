@@ -1,6 +1,5 @@
 {
   lib,
-  config,
   inputs,
   pkgs,
   ...
@@ -213,6 +212,7 @@ in
     lua-language-server
     fortune
     figlet
+    catch2
     gcc
   ];
 

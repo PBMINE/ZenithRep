@@ -135,7 +135,7 @@
     },
 
     "custom/wlogout": {
-        "format": "  󰣇  ",
+        "format": "    ",
         "on-click": "swaync-client -t"
     },
 

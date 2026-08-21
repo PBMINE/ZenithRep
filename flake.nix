@@ -7,7 +7,8 @@
       url = "github:hyprwm/Hyprland";
     };
 
-    waybar.url = "github:alexays/waybar/master";
+    waybar.url = "github:alexays/waybar/71a122037359bf11a5847af49f9e53397079ddcc";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
