@@ -5,15 +5,10 @@
   ...
 }:
 
-let
-  davinci-actual =
-    (import (pkgs.writeText "davinci-actual-resolve.nix" (
-      builtins.readFile "/home/pbmine/.config/davinci-actual-resolve.nix"
-    )) { inherit pkgs lib; }).davinci-actual;
-in
 {
   imports = [
     ./hardware-configuration.nix
+    ./davinci-resolve-patched.nix
     inputs.mesa-git-nix.nixosModules.default
   ];
 
@@ -133,7 +128,7 @@ in
       swaynotificationcenter
       gnome-themes-extra
       krita
-      davinci-actual
+      davinci-resolve-patched
       modrinth-app
       pavucontrol
       opencode
