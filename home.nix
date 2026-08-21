@@ -6,12 +6,13 @@
 }:
 let
   dotfiles = "${config.home.homeDirectory}/.zenithrep/configs";
+  homeconfigs = "${config.xdg.configHome}";
   createSymlink = path: config.lib.file.mkOutOfStoreSymlink path;
   configs = {
     hypr = "hypr";
     waybar = "waybar";
     fastfetch = "fastfetch";
-    zsh = "zsh";
+    # zsh = "zsh";
     kitty = "kitty";
   };
 in
@@ -26,7 +27,7 @@ in
       enable = true;
     };
 
-    dotDir = "${dotfiles}/zsh";
+    dotDir = "${homeconfigs}/zsh";
     plugins = [
       {
         name = "powerlevel10k";
@@ -35,7 +36,7 @@ in
       }
       {
         name = "powerlevel10k-config";
-        src = "${dotfiles}/zsh";
+        src = ./configs/zsh;
         file = ".p10k.zsh";
       }
       {
@@ -82,9 +83,14 @@ in
 
   xdg.enable = true;
 
-  xdg.configFile = builtins.mapAttrs (name: subpath: {
-    source = createSymlink "${dotfiles}/${subpath}";
-    recursive = true;
-  }) configs;
+  xdg.configFile = lib.mkMerge [
+    (builtins.mapAttrs (name: subpath: {
+      source = createSymlink "${dotfiles}/${subpath}";
+      recursive = true;
+    }) configs)
+    {
+      "zsh/.p10k.zsh".source = createSymlink "${dotfiles}/zsh/.p10k.zsh";
+    }
+  ];
 
 }

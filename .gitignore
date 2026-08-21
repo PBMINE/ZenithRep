@@ -7,3 +7,4 @@ configs/zsh/.zshrc
 configs/zsh/plugins/powerlevel10k
 configs/zsh/plugins/powerlevel10k-config
 configs/zsh/plugins/zsh-syntax-highlighting
+configs/zsh/.zcompdump*

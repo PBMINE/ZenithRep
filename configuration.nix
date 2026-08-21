@@ -1,5 +1,4 @@
 {
-  lib,
   inputs,
   pkgs,
   ...
@@ -8,7 +7,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./davinci-resolve-patched.nix
+    inputs.davinci-resolve-patched.nixosModules.davinci-patched
     inputs.mesa-git-nix.nixosModules.default
   ];
 
@@ -31,6 +30,14 @@
     enable = true;
     powerOnBoot = true;
   };
+
+  powerManagement = {
+    enable = true;
+  };
+
+  services.power-profiles-daemon.enable = true;
+
+
 
   boot.kernelPackages = pkgs.linuxPackages_testing;
 

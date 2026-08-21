@@ -33,6 +33,18 @@
         "type": "github"
       }
     },
+    "davinci-resolve-patched": {
+      "locked": {
+        "lastModified": 1787284932,
+        "narHash": "sha256-PzJrcrD6fZHwE0S6SC1kIQ/lRauZ24x4k4goKf0Eki8=",
+        "path": "/home/pbmine/davinci-resolve-patched",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/pbmine/davinci-resolve-patched",
+        "type": "path"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -631,6 +643,7 @@
     },
     "root": {
       "inputs": {
+        "davinci-resolve-patched": "davinci-resolve-patched",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",

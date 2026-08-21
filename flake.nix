@@ -23,6 +23,9 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+
+    davinci-resolve-patched.url = "path:/home/pbmine/davinci-resolve-patched";
+
   };
 
   outputs =
@@ -30,6 +33,7 @@
       self,
       nixpkgs,
       home-manager,
+      davinci-resolve-patched,
       ...
     }@inputs:
     {
