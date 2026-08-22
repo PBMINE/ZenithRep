@@ -158,11 +158,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787176219,
-        "narHash": "sha256-djoRr6jBpe35q/0JwAvXpFXg1Ktf+X54NU2RLR7wnHw=",
+        "lastModified": 1787379775,
+        "narHash": "sha256-XL2qfqmocfsvuEGyomZg4nOZfkuSe8vZtrOX99I+b6I=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "c53d643b3737e2fcd04e6cb3b3580ef50b2087a0",
+        "rev": "ec1a8fdf74ed3f276148ee106299a2ba0e65d51f",
         "type": "github"
       },
       "original": {
@@ -246,11 +246,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1787311583,
-        "narHash": "sha256-EXpfUX7oLzqwd+m/T1TvH/rHwnTNtZL+TZ5wiCwklMo=",
+        "lastModified": 1787346220,
+        "narHash": "sha256-iDmbrZM6XcLPRNWGo4g54XppRSuC8Q+GpInjbD9qrK8=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "0f97a22d1172d8fbd77834ec932383ed18110edb",
+        "rev": "d29916a91c201cc7043aa68ace2e5dfba59c13d8",
         "type": "github"
       },
       "original": {
@@ -530,11 +530,11 @@
         "std": "std"
       },
       "locked": {
-        "lastModified": 1787293361,
-        "narHash": "sha256-zIKg2yw9L3nGjFv4KXq2aEY0gEHphBTw4KkoiO35hxE=",
+        "lastModified": 1787379457,
+        "narHash": "sha256-O+FFD93uzl1CioZY64cnC7JqTd1TgMzdVMQdfHmgqNI=",
         "owner": "Daaboulex",
         "repo": "mesa-git-nix",
-        "rev": "a48e7c18398bd7f9197f52e4210f3314d4931f52",
+        "rev": "aef1cd4ea613f464423557a437d49e2e3cf95913",
         "type": "github"
       },
       "original": {
