@@ -37,12 +37,23 @@
 
   services.power-profiles-daemon.enable = true;
 
-  services.fwupd.enable = true;
-
+  services.fwupd = {
+    enable = true;
+    daemonSettings = {
+      "IgnorePower" = true;
+    };
+  };
 
   boot.kernelPackages = pkgs.linuxPackages_testing;
 
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.limine = {
+    enable = true;
+    style = {
+      wallpaperStyle = "stretched";
+      wallpapers = [ "/home/pbmine/Pictures/wallpaper/GTM3gHkb0AAP-5W.jpg" ];
+    };
+  };
+
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos";
@@ -70,12 +81,28 @@
   services.pipewire.wireplumber.enable = true;
 
   services.flatpak.enable = true;
-
   services.desktopManager.gnome.enable = true;
   services.gnome.core-developer-tools.enable = false;
   services.gnome.games.enable = false;
 
-  services.displayManager.ly.enable = true;
+  services.displayManager = {
+    ly = {
+      enable = true;
+      settings = {
+        auto_login_service = "ly-autologin";
+        animation = "matrix";
+        auto_login_session = "hyprland-uwsm";
+        battery_id = "BAT0";
+        bigclock = "en";
+      };
+    };
+    autoLogin = {
+      enable = true;
+      user = "pbmine";
+    };
+  };
+
+
   #   services.displayManager.gdm.enable = true;
 
   #   services.getty.autologinUser = "pbmine";
@@ -176,7 +203,8 @@
   programs.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    portalPackage =
+      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     xwayland.enable = true;
     withUWSM = true;
   };
@@ -240,8 +268,11 @@
     ];
 
     substituters = [
-      "https://hyprland.cachix.org"
+      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+      "https://mirror.sjtu.edu.cn/nix-channels/store"
       "https://mirrors.ustc.edu.cn/nix-channels/store"
+      "https://hyprland.cachix.org"
+
       "https://cache.nixos.org/"
     ];
 
