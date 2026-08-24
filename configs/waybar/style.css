@@ -16,7 +16,7 @@ window#waybar {
     transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-#hardware, #ws, #wlongout, #barnetwork, #hyprlang, #powerstuff, #centerclock {
+#hardware,#center, #swaync, #hyprlang, #powerstuff, #centerclock {
     background-color: @matchsurface;
     border: 3px solid @matchonsurfacelow;
     border-radius: 0px;
@@ -50,12 +50,10 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 6px;
-    min-width: 20px;
-    min-height: 24px;
+    padding: 0 0px;
     background-color: transparent;
     color: @on_surface_variant;
-    font-weight: 600;
+    font-weight: 500;
     border-radius: 0px;
     transition: all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -70,9 +68,9 @@ button:hover {
     color: @on_primary;
 }
 
-#workspaces button:not(.active).empty {
+/*#workspaces button:not(.active).empty {
     opacity: 0.25;
-}
+}*/
 
 #workspaces button.urgent {
     background-color: @error;
@@ -96,7 +94,7 @@ button:hover {
 }
 
 #clock, #battery, #cpu, #memory, #temperature, #network, #pulseaudio, #tray, #mode {
-    padding: 0 10px;
+    padding: 0 7px;
     color: @on_surface_variant;
 }
 
@@ -152,7 +150,7 @@ button:hover {
 #temperature.critical {
     background-color: transparent;
 }
-
+/*
 #tray {
     background-color: transparent;
 }
@@ -165,7 +163,7 @@ button:hover {
     -gtk-icon-effect: highlight;
     background-color: rgba(0, 0, 0, 0.25);
     border-radius: 4px;
-}
+}*/
 
 #language {
     background: transparent;
@@ -181,6 +179,27 @@ button:hover {
 
 #scratchpad.empty {
     background-color: @matchsurface;
+}
+
+#custom-hardware-wrap {
+    box-shadow: none;
+    text-shadow: none;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 8px;
+    margin-left: 6px;
+    background-color: transparent;
+    color: @on_surface_variant;
+}
+
+#custom-tray-wrap {
+    box-shadow: none;
+    text-shadow: none;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 6px;
+    background-color: transparent;
+    color: @on_surface_variant;
 }
 
 tooltip {

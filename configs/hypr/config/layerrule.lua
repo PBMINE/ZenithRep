@@ -9,7 +9,7 @@ hl.layer_rule({ animation = "popin", match = { namespace = "rofi" } })
 hl.layer_rule({ ignore_alpha = 0, match = { namespace = "rofi" } })
 
 hl.layer_rule({ blur = true, match = { namespace = "waybar" } })
-hl.layer_rule({ animation = "slide top", match = { namespace = "waybar" } })
+hl.layer_rule({ animation = "slide bottom", match = { namespace = "waybar" } })
 hl.layer_rule({ ignore_alpha = 0, match = { namespace = "waybar" } })
 hl.layer_rule({ blur_popups = true, match = { namespace = "waybar" } })
 
@@ -19,7 +19,7 @@ hl.layer_rule({ ignore_alpha = 0, match = { namespace = "logout_dialog" } })
 
 hl.layer_rule({ blur = true, match = { namespace = "swaync-notification-window" } })
 hl.layer_rule({ ignore_alpha = 0.35, match = { namespace = "swaync-notification-window" } })
-hl.layer_rule({ animation = "slide right", match = { namespace = "swaync-notification-window" } })
+hl.layer_rule({ animation = "slide bottom", match = { namespace = "swaync-notification-window" } })
 
 hl.layer_rule({ blur = true, match = { namespace = "swayosd" } })
 hl.layer_rule({ animation = "slide bottom", match = { namespace = "swayosd" } })

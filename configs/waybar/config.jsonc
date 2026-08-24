@@ -5,36 +5,47 @@
     "spacing": 15,
     "position": "bottom",
     "reload_style_on_change": true,
-    "modules-left": ["group/ws", "group/hardware"],
+    "modules-left": [ "group/hyprlang", "group/hardware"],
 
-    "group/ws": {
+    "group/center": {
         "orientation": "horizontal",
-        "modules": ["hyprland/workspaces"]
+        "modules": ["hyprland/window", "hyprland/workspaces", "group/traydrawer","pulseaudio", "network","bluetooth","clock","battery","custom/swaync" ]
     },
 
     "group/hardware": {
-        "orientation": "horizontal",
-        "modules": ["hyprland/submap", "cpu", "memory", "temperature", "hyprland/window"]
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": true,
+            "click-to-reveal": true,
+        },
+        "modules": ["custom/hardware-wrap", "cpu", "memory", "temperature"]
     },
 
-    "modules-center": [],
-
-    "group/centerclock": {
-        "orientation": "horizontal",
-        "modules": ["tray", "battery", "clock", "custom/wlogout"]
+    "custom/hardware-wrap": {
+        "format": "󰚗",
+        "tooltip-format": "Hardware and etc"
     },
 
-    "modules-right": ["group/barnetwork", "group/hyprlang", "group/powerstuff", "group/centerclock"],
-
-    "group/powerstuff": {
-        "orientation": "horizontal",
-        "modules": ["pulseaudio"]
+    "group/traydrawer": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": false,
+            "click-to-reveal": true,
+        },
+        "modules": [ "custom/tray-wrap", "tray" ],
     },
 
-    "group/barnetwork": {
-        "orientation": "horizontal",
-        "modules": ["network", "bluetooth"]
+    "custom/tray-wrap": {
+        "format": "",
+        "tooltip-format": "Background application (tray)"
     },
+
+    "modules-center": [ "group/center" ],
+
+    "modules-right": [],
+
 
     "group/hyprlang": {
         "orientation": "horizontal",
@@ -42,13 +53,35 @@
     },
 
     "tray": {
-        "spacing": 10
+        "icon-size": 12,
+        "spacing": 12
     },
 
-    "clock": {
+    /*"clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
+    },*/
+
+    "clock": {
+        "format": "{:%A %H:%M}",
+        "format-alt": "{:%A, %B %d, %Y (%R)}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "weeks-pos": "right",
+            "first-day-of-week": 1,
+            "format": {
+                "today": "<u><b>{}</b></u>",
+                "weeks": "<span color='#888888'><i>W{}</i></span>"
+            },
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
     },
+
 
     "cpu": {
         "format": "{usage}%  󰍛",
@@ -67,15 +100,19 @@
 
     "battery": {
         "states": {
-            "warning": 30,
-            "critical": 15
+            "warning": 20,
+            "critical": 5
         },
-        "format": "{capacity}%  {icon}",
-        "format-full": "{capacity}%  {icon}",
-        "format-charging": "{capacity}%  󰂄",
-        "format-plugged": "{capacity}%  󰚥",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["󰂎", "󰁻", "󰁽", "󰁿", "󰁹"]
+    	"events": {
+            "on-discharging-warning": "notify-send -u normal -i battery-low -t 5000 -c device 'Low Battery!' 'You may plug-in your charger soon.'",
+            "on-discharging-critical": "notify-send -u critical -t 0 'Very Low Battery!' 'Goodluck, The system will shutdown.'"
+        },
+        "format": "{icon} ",
+        "format-full": "{icon} ",
+        "format-charging":" {icon} ",
+        "format-plugged": "󰚥 {icon} ",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format": "You're battery is at {capacity}%, It will last for {time}"
     },
 
     "power-profiles-daemon": {
@@ -106,12 +143,12 @@
     },
 
     "pulseaudio": {
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": "  {icon} {format_source}",
-        "format-muted": "  {format_source}",
-        "format-source": "   {volume}% 󰍬 ",
-        "format-source-muted": " 󰍭 ",
+        "format": " {volume}% {icon} {format_source}",
+        "format-bluetooth": " {volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "   {icon} {format_source}",
+        "format-muted": "   {format_source}",
+        "format-source": " {volume}% 󰍬 ",
+        "format-source-muted": " 󰍭",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -125,19 +162,21 @@
     },
 
     "bluetooth": {
-        "format": "   ",
-        "format-disabled": " 󰂲  ",
-        "format-connected": "   ",
+        "format": "   ",
+        "format-disabled": "  󰂲 ",
+        "format-connected": "   ",
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "on-click": "rofi-bluetooth"
     },
 
-    "custom/wlogout": {
-        "format": "    ",
+    "custom/swaync": {
+        "format": "   ",
+        "tooltip-format": "Notfication Center",
         "on-click": "swaync-client -t"
     },
+
 
     "hyprland/language": {
         "format": "{}",
@@ -150,12 +189,16 @@
         "all-outputs": true,
         "format": " {name} ",
         "active-only": false,
-        "on-click": "hyprctl dispatch workspace {name}"
+        "on-click": "hyprctl dispatch workspace {name}",
+        "persistent-workspaces": {
+            "*": 9,
+        },
     },
 
     "hyprland/window": {
         "max-length": 40,
         "max-chars": 40,
+        "fallback": "No window",
         "separate-outputs": true
     }
 }
