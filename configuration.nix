@@ -37,6 +37,7 @@
 
   services.power-profiles-daemon.enable = true;
 
+  services.fwupd.enable = true;
 
 
   boot.kernelPackages = pkgs.linuxPackages_testing;

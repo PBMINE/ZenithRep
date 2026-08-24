@@ -18,7 +18,7 @@ window#waybar {
 
 #hardware, #ws, #wlongout, #barnetwork, #hyprlang, #powerstuff, #centerclock {
     background-color: @matchsurface;
-    border: 2px solid @matchonsurfacelow;
+    border: 3px solid @matchonsurfacelow;
     border-radius: 0px;
     background-clip: padding-box;
 }
