@@ -35,7 +35,7 @@
     },
     "davinci-resolve-patched": {
       "locked": {
-        "lastModified": 1787284932,
+        "lastModified": 1787486490,
         "narHash": "sha256-PzJrcrD6fZHwE0S6SC1kIQ/lRauZ24x4k4goKf0Eki8=",
         "path": "/home/pbmine/davinci-resolve-patched",
         "type": "path"
@@ -158,11 +158,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787379775,
-        "narHash": "sha256-XL2qfqmocfsvuEGyomZg4nOZfkuSe8vZtrOX99I+b6I=",
+        "lastModified": 1787540599,
+        "narHash": "sha256-MHwk52ty3NsLhq9a1IbIfBJZlCUJIdiUYFo52JLK9hY=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "ec1a8fdf74ed3f276148ee106299a2ba0e65d51f",
+        "rev": "03f4cd46bc1dd4f3a96da778d2ce9f7ce39dd450",
         "type": "github"
       },
       "original": {
@@ -246,11 +246,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1787436444,
-        "narHash": "sha256-iLWbH4BQ7x/x7oGGwlj/OarJjrmuisOFDZgc2rar9tw=",
+        "lastModified": 1787505664,
+        "narHash": "sha256-ds9J1/RBDzgSFtb20+MbXS/v8xA7TLRh7YSnD6cWSgY=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "45a79e5e84136025a5da1de34c9c65fe00cb813e",
+        "rev": "951ab550e7ea050e4b871f99faf87d99c601c44a",
         "type": "github"
       },
       "original": {
@@ -322,11 +322,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787071735,
-        "narHash": "sha256-1DDAvYcJ7q1x4JdhoXU+PTQWxAUcv53gSNmmi9pBVuU=",
+        "lastModified": 1787505272,
+        "narHash": "sha256-QlwOFpistZmkBdIrCBya3ooLOIFL6E3zYRID5LmuNQ8=",
         "owner": "hyprwm",
         "repo": "hyprland-plugins",
-        "rev": "83ce4b2a70d3c1a6ed8dc6db7f1fac17db2215b1",
+        "rev": "2b41ad87ba68226472b8a811c3f580a1eabb10bb",
         "type": "github"
       },
       "original": {
@@ -530,11 +530,11 @@
         "std": "std"
       },
       "locked": {
-        "lastModified": 1787465944,
-        "narHash": "sha256-ZpNZfj6dHhA7PmfV6GycpF/4uCzz8AKxktyoCLc+6OQ=",
+        "lastModified": 1787553067,
+        "narHash": "sha256-dsMxiKlx9IxMcylOU9ZrsyRIcWuXMdTqZwmpEJiK7lo=",
         "owner": "Daaboulex",
         "repo": "mesa-git-nix",
-        "rev": "976c64b9c08d8cac5ea3a58784e797e075b2d27e",
+        "rev": "4710a830bce31023ad99748b5169753252c24bfe",
         "type": "github"
       },
       "original": {
@@ -591,11 +591,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1787360063,
-        "narHash": "sha256-95aJfHyQTLWslCXFVNB0odgmVkpdmDezQwTg9mhqV1E=",
-        "rev": "2c423e03bbafcff28bfadc6781a4a8257f205cb5",
+        "lastModified": 1787498568,
+        "narHash": "sha256-FoOSoBG7tEvOlGRTpWnVdY506Ner4y7r7UYO3OGgmE8=",
+        "rev": "56c02bc00adcf003215cc4bd996d6efaf4cff188",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1059570.2c423e03bbaf/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1060451.56c02bc00adc/nixexprs.tar.xz"
       },
       "original": {
         "id": "nixpkgs",
