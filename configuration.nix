@@ -15,6 +15,7 @@
 
   mesa-git = {
     enable = true;
+    drivers = [ "amd" ];
   };
 
   hardware.graphics = {

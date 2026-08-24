@@ -35,8 +35,8 @@
     },
     "davinci-resolve-patched": {
       "locked": {
-        "lastModified": 1787486490,
-        "narHash": "sha256-PzJrcrD6fZHwE0S6SC1kIQ/lRauZ24x4k4goKf0Eki8=",
+        "lastModified": 1787578904,
+        "narHash": "sha256-PBXnz8jk7nRMyAurLcfd8ygLOmrDbt9R9mKFzzUEWa4=",
         "path": "/home/pbmine/davinci-resolve-patched",
         "type": "path"
       },
