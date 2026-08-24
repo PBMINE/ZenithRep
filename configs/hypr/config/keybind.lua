@@ -23,7 +23,7 @@ end
 hl.bind(modkeys .. " + E", hl.dsp.exec_cmd(uwsm.wrap(_programs.fileManager)))
 
 -- Wallpaper picker with Rofi + Matugen
-hl.bind(modkeys .. " + W", hl.dsp.exec_cmd(uwsm.wrap("/home/pbmine/.config/hypr/scripts/wallpaper-picker.sh")))
+hl.bind(modkeys .. " + W", hl.dsp.exec_cmd(uwsm.wrap("/home/pbmine/.zenithrep/configs/rofi/scripts/wallpaper-picker.sh")))
 
 -- OpenTabletDriver toggle
 hl.bind("code:191", function()
