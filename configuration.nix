@@ -168,6 +168,7 @@
       modrinth-app
       pavucontrol
       opencode
+      qemu_kvm
       matugen
       flameshot
       grim
