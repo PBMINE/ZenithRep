@@ -76,6 +76,7 @@ in
 
   home.packages = with pkgs; [
     fastfetch
+    pfetch-rs
     fetch
   ];
 
