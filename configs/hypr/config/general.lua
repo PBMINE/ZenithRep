@@ -15,7 +15,7 @@ local colors = require("colors")
 hl.config({
     general = {
         gaps_in = 4,
-        gaps_out = { top = 20, right = 20, bottom = 10, left = 20 },
+        gaps_out = { top = 10, right = 10, bottom = 5, left = 10 },
         border_size = 4,
         col = {
             active_border = colors.matchsurfacelow,
