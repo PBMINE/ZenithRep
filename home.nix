@@ -79,6 +79,7 @@ in
     pkgs.fastfetch
     pkgs.pfetch-rs
     pkgs.fetch
+    pkgs.kdePackages.qtdeclarative
   ];
 
   programs.quickshell = {
