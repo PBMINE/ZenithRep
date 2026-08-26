@@ -19,9 +19,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
+    quickshell = {
+      # add ?ref=<tag> to track a tag
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+
+      # THIS IS IMPORTANT
+      # Mismatched system dependencies will lead to crashes and other issues.
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     davinci-resolve-patched.url = "path:/home/pbmine/davinci-resolve-patched";
@@ -34,6 +38,7 @@
       nixpkgs,
       home-manager,
       davinci-resolve-patched,
+      quickshell,
       ...
     }@inputs:
     {
@@ -47,6 +52,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
+              extraSpecialArgs = { inherit quickshell; };
               backupFileExtension = "backup";
               users.pbmine = import ./home.nix;
               users.nullnormal = import ./nullhome.nix;

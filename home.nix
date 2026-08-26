@@ -2,6 +2,7 @@
   lib,
   config,
   pkgs,
+  quickshell,
   ...
 }:
 let
@@ -74,10 +75,11 @@ in
 
   };
 
-  home.packages = with pkgs; [
-    fastfetch
-    pfetch-rs
-    fetch
+  home.packages = [
+    pkgs.fastfetch
+    pkgs.pfetch-rs
+    pkgs.fetch
+    quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   services.hyprpolkitagent.enable = true;
