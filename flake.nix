@@ -52,7 +52,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = { inherit quickshell; };
+              extraSpecialArgs = { inherit inputs; };
               backupFileExtension = "backup";
               users.pbmine = import ./home.nix;
               users.nullnormal = import ./nullhome.nix;

@@ -2,7 +2,7 @@
   lib,
   config,
   pkgs,
-  quickshell,
+  inputs,
   ...
 }:
 let
@@ -13,8 +13,8 @@ let
     hypr = "hypr";
     waybar = "waybar";
     fastfetch = "fastfetch";
-    # zsh = "zsh";
     kitty = "kitty";
+    quickshell = "quickshell";
   };
 in
 {
@@ -79,8 +79,12 @@ in
     pkgs.fastfetch
     pkgs.pfetch-rs
     pkgs.fetch
-    quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
+
+  programs.quickshell = {
+    enable = true;
+    package = inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default;
+  };
 
   services.hyprpolkitagent.enable = true;
 
