@@ -30,6 +30,6 @@ hl.layer_rule({ ignore_alpha = 0.35, match = { namespace = "swaync-control-cente
 hl.layer_rule({ animation = "slide right", match = { namespace = "swaync-control-center" } })
 
 hl.layer_rule({ blur = true, match = { namespace = "quickshell" } })
-hl.layer_rule({ animation = "slide top", match = { namespace = "quickshell" } })
+hl.layer_rule({ animation = "slide bottom", match = { namespace = "quickshell" } })
 hl.layer_rule({ ignore_alpha = 0, match = { namespace = "quickshell" } })
 hl.layer_rule({ blur_popups = true, match = { namespace = "quickshell" } })
