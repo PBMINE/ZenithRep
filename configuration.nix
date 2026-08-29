@@ -27,6 +27,10 @@
     ];
   };
 
+  hardware.opentabletdriver.enable = true;
+  hardware.uinput.enable = true;
+  boot.kernelModules = [ "uinput" ];
+
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;

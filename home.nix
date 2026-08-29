@@ -79,13 +79,14 @@ in
     pkgs.fastfetch
     pkgs.pfetch-rs
     pkgs.fetch
+    pkgs.libresprite
     pkgs.kdePackages.qtdeclarative
   ];
 
-  programs.quickshell = {
-    enable = true;
-    package = inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default;
-  };
+   programs.quickshell = {
+     enable = true;
+     package = inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default;
+   };
 
   services.hyprpolkitagent.enable = true;
 
