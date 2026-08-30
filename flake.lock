@@ -246,11 +246,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1788090177,
-        "narHash": "sha256-+dW2UIg4Yeiw9PhB8FNU/xO8l4/Msyc/8wA4wB6t0Dc=",
+        "lastModified": 1788100302,
+        "narHash": "sha256-21MFGYEl3m5SjN9kZGKb+gELVLlMCF1DkbwHqHzSK1w=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "ebc37ccc16a02f68a65530f0a343336aedbf3e06",
+        "rev": "86c24e2e079aa62214421c76f01b603fc8178125",
         "type": "github"
       },
       "original": {
@@ -633,7 +633,7 @@
     },
     "rokit": {
       "locked": {
-        "lastModified": 1788092273,
+        "lastModified": 1788102528,
         "narHash": "sha256-cxxtnMvyZtYFvXMtJC4+O1RTJqXM99UUvHTfshuD4Ew=",
         "path": "/home/pbmine/rokit-nix",
         "type": "path"
