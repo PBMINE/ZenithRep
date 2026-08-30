@@ -8,6 +8,7 @@
   imports = [
     ./hardware-configuration.nix
     inputs.davinci-resolve-patched.nixosModules.davinci-patched
+    inputs.rokit.nixosModules.rokit
     inputs.mesa-git-nix.nixosModules.default
   ];
 

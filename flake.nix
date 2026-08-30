@@ -30,6 +30,8 @@
 
     davinci-resolve-patched.url = "path:/home/pbmine/davinci-resolve-patched";
 
+    rokit.url = "path:/home/pbmine/rokit-nix";
+
   };
 
   outputs =
@@ -39,6 +41,7 @@
       home-manager,
       davinci-resolve-patched,
       quickshell,
+      rokit,
       ...
     }@inputs:
     {
