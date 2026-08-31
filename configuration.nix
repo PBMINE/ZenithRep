@@ -72,6 +72,7 @@
 
   security.polkit.enable = true;
   security.rtkit.enable = true;
+  security.pam.services.hyprlock = {};
 
   time.timeZone = "Asia/Bangkok";
 
@@ -216,7 +217,7 @@
     withUWSM = true;
   };
 
-  programs.hyprlock.enable = true;
+#   programs.hyprlock.enable = true;
 
   services.hypridle.enable = true;
 

@@ -500,11 +500,11 @@
         "std": "std"
       },
       "locked": {
-        "lastModified": 1788086862,
-        "narHash": "sha256-FrsG0QrmeAA4Slv6WwAAoyjatokpz6GQEBUHsdyLKEY=",
+        "lastModified": 1788177419,
+        "narHash": "sha256-rnIMt/eVCebCw9ypksPq/UlwpvxAC/DB9Iu4VdC9jXU=",
         "owner": "Daaboulex",
         "repo": "mesa-git-nix",
-        "rev": "3360dcdd656f4a3efa96929e66859dc4c6043c9e",
+        "rev": "39a6b9583418148eb22197cd78a13f4c328557e2",
         "type": "github"
       },
       "original": {

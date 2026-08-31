@@ -53,6 +53,7 @@ in
 
     shellAliases = {
       jigsaw = "echo I have engineer, btw";
+      zenithbuild = "sudo nixos-rebuild switch --flake ~/.zenithrep#nixos";
     };
 
     initContent = lib.mkOrder 1000 ''
@@ -91,6 +92,8 @@ in
    };
 
   services.hyprpolkitagent.enable = true;
+
+  programs.hyprlock.enable = true;
 
   xdg.enable = true;
 
