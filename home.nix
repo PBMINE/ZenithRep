@@ -53,7 +53,8 @@ in
 
     shellAliases = {
       jigsaw = "echo I have engineer, btw";
-      zenithbuild = "sudo nixos-rebuild switch --flake ~/.zenithrep#nixos";
+      zbuild = "sudo nixos-rebuild switch --flake ~/.zenithrep#nixos";
+      zreplicate = "cd ~/.zenithrep";
     };
 
     initContent = lib.mkOrder 1000 ''
