@@ -81,6 +81,8 @@ in
     pkgs.fetch
     pkgs.libresprite
     pkgs.kdePackages.qtdeclarative
+    pkgs.mission-center
+    pkgs.mcpelauncher-ui-qt
   ];
 
    programs.quickshell = {
