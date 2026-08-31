@@ -56,7 +56,7 @@
     enable = true;
     style = {
       wallpaperStyle = "stretched";
-      wallpapers = [ "/home/pbmine/Pictures/wallpaper/GTM3gHkb0AAP-5W.jpg" ];
+      wallpapers = [ "/home/pbmine/Pictures/wallpaper/phuckingpicture2.jpg" ];
     };
   };
 
