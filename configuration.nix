@@ -31,6 +31,7 @@
   hardware.opentabletdriver.enable = true;
   hardware.uinput.enable = true;
   boot.kernelModules = [ "uinput" ];
+  boot.kernelParams = [ "drm.panic_screen=qr_code" ];
 
   hardware.bluetooth = {
     enable = true;

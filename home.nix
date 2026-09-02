@@ -53,8 +53,9 @@ in
 
     shellAliases = {
       jigsaw = "echo I have engineer, btw";
-      zbuild = "sudo nixos-rebuild switch --flake ~/.zenithrep#nixos";
-      zreplicate = "cd ~/.zenithrep";
+      znbuild = "sudo nixos-rebuild switch --flake ~/.zenithrep#nixos";
+      znreplicate = "cd ~/.zenithrep";
+      znupdate = "cd ~/.zenithrep && nix flake update";
     };
 
     initContent = lib.mkOrder 1000 ''
@@ -77,14 +78,14 @@ in
 
   };
 
-  home.packages = [
-    pkgs.fastfetch
-    pkgs.pfetch-rs
-    pkgs.fetch
-    pkgs.libresprite
-    pkgs.kdePackages.qtdeclarative
-    pkgs.mission-center
-    pkgs.mcpelauncher-ui-qt
+  home.packages = with pkgs; [
+    fastfetch
+    pfetch-rs
+    fetch
+    libresprite
+    kdePackages.qtdeclarative
+    mission-center
+    mcpelauncher-ui-qt
   ];
 
    programs.quickshell = {
