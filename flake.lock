@@ -500,11 +500,11 @@
         "std": "std"
       },
       "locked": {
-        "lastModified": 1788361368,
-        "narHash": "sha256-l9EHIfkkRE1I4t5OMJzhv4NdvbRZjIsdxjqFX8J1fl4=",
+        "lastModified": 1788430331,
+        "narHash": "sha256-1n0BL7usK237l3JlTIFYf33hjmB76IHGKJ9sAgN1h1o=",
         "owner": "Daaboulex",
         "repo": "mesa-git-nix",
-        "rev": "8c67e35186e5992316e728a39b41b5131145b268",
+        "rev": "18d607a8cfc2b3bfc613e191af82d8183ed53c01",
         "type": "github"
       },
       "original": {
@@ -561,11 +561,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1788179007,
-        "narHash": "sha256-maQBa7XmWJ+a6te4QwF++R1FIXUrjvki0AtGOOhyZn0=",
-        "rev": "34ab99075ac4f7e40cf037eef32cb1c360bb85e9",
+        "lastModified": 1788316716,
+        "narHash": "sha256-7VBL4mi5M72FJtZOQt7SbCGWpGbsuH1ga6Zeu8bjtWk=",
+        "rev": "3ed67ec0a4d3c7ab4ae1f04f8ee8df07bfa506a2",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1064949.34ab99075ac4/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1066106.3ed67ec0a4d3/nixexprs.tar.xz"
       },
       "original": {
         "id": "nixpkgs",

@@ -56,6 +56,8 @@ in
       znbuild = "sudo nixos-rebuild switch --flake ~/.zenithrep#nixos";
       znreplicate = "cd ~/.zenithrep";
       znupdate = "cd ~/.zenithrep && nix flake update";
+      zncollect = "sudo nix-collect-garbage -d";
+      znoptimize = "sudo nix-store --optimize";
     };
 
     initContent = lib.mkOrder 1000 ''
@@ -160,6 +162,7 @@ in
     fetch
     libresprite
     kdePackages.qtdeclarative
+    kdePackages.konsole
     mission-center
     jp2a
     mcpelauncher-ui-qt
@@ -206,6 +209,8 @@ in
     matugen
     flameshot
     grim
+    zls
+    zig
   ];
 
   programs.quickshell = {
