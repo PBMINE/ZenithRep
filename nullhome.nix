@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   home.username = "nullnormal";
@@ -6,8 +6,16 @@
   home.stateVersion = "26.11";
   programs.zsh = {
     enable = true;
-    shellAliases = {
-      btw = "echo I use thinkpad, btw";
-    };
   };
+
+  home.packages = with pkgs; [
+      firefox
+      aria2
+      protonplus
+      wineWow64Packages.waylandFull
+      winetricks
+      gnome-tweaks
+      nwjs
+      gnome-extension-manager
+  ];
 }

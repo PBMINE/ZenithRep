@@ -44,6 +44,10 @@
 
   services.power-profiles-daemon.enable = true;
 
+  services.geoclue2 = {
+    enable = true;
+  };
+
   services.fwupd = {
     enable = true;
     daemonSettings = {
@@ -110,19 +114,9 @@
     };
   };
 
-
-  #   services.displayManager.gdm.enable = true;
-
-  #   services.getty.autologinUser = "pbmine";
-
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
-    /*
-      config.common = {
-        default = [ "*" ];
-      };
-    */
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -135,72 +129,17 @@
       "networkmanager"
     ];
     shell = pkgs.zsh;
-    packages = with pkgs; [
-      element-desktop
-      kdePackages.dolphin
-      kdePackages.ark
-      kdePackages.kate
-      apostrophe
-      kdePackages.lokalize
-      btop
-      vesktop
-      rofi
-      kitty
-      networkmanager_dmenu
-      rofi-bluetooth
-      komikku
-      bluetui
-      awww
-      vscode
-      cmatrix
-      steam
-      wineWow64Packages.waylandFull
-      winetricks
-      swayosd
-      inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar
-      (pkgs.wrapOBS {
-        plugins = with pkgs.obs-studio-plugins; [
-          wlrobs
-          obs-backgroundremoval
-          obs-pipewire-audio-capture
-          obs-vaapi
-          obs-gstreamer
-          obs-vkcapture
-        ];
-      })
-      swaynotificationcenter
-      gnome-themes-extra
-      krita
-      davinci-resolve-patched
-      modrinth-app
-      pavucontrol
-      opencode
-      qemu_kvm
-      matugen
-      flameshot
-      grim
-    ];
   };
 
   users.users.nullnormal = {
     isNormalUser = true;
     home = "/home/nullnormal";
-    description = "GNOME Desktop User";
+    description = "Very OPSEC user";
     extraGroups = [
       "wheel"
       "networkmanager"
     ];
     shell = pkgs.zsh;
-    packages = with pkgs; [
-      firefox
-      aria2
-      protonplus
-      wineWow64Packages.waylandFull
-      winetricks
-      gnome-tweaks
-      nwjs
-      gnome-extension-manager
-    ];
   };
 
   programs.xwayland.enable = true;
@@ -217,8 +156,6 @@
     xwayland.enable = true;
     withUWSM = true;
   };
-
-#   programs.hyprlock.enable = true;
 
   services.hypridle.enable = true;
 
