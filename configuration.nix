@@ -32,7 +32,7 @@
   hardware.uinput.enable = true;
   boot.kernelModules = [ "uinput" ];
   boot.kernelParams = [ "drm.panic_screen=qr_code" ];
-
+  boot.initrd.supportedFilesystems = [ "btrfs" ];
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;

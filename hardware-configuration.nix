@@ -14,8 +14,9 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/f2ed6361-5d7e-494d-896e-32e151d61ba6";
-      fsType = "ext4";
+    { device = "/dev/disk/by-uuid/37187c4f-5f18-4ce0-b719-4bdfb7d3996c";
+      fsType = "btrfs";
+      options = [ "compress=zstd" ];
     };
 
   fileSystems."/boot" =
