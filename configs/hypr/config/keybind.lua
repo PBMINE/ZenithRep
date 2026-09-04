@@ -59,7 +59,7 @@ hl.bind(modkeys .. " + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(modkeys .. " + down", hl.dsp.focus({ direction = "down" }))
 
 -- Workspaces
-for i = 1, 10 do
+for i = 1, 9 do
     local key = i % 10
     hl.bind(modkeys .. " + " .. key, hl.dsp.focus({ workspace = i }))
     hl.bind(modkeys .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
