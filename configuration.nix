@@ -97,6 +97,11 @@
   services.gnome.core-developer-tools.enable = false;
   services.gnome.games.enable = false;
 
+  services.earlyoom = {
+    enable = true;
+    enableNotifications = true;
+  };
+
   services.displayManager = {
     ly = {
       enable = true;
